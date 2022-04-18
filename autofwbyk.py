@@ -4,17 +4,17 @@ from telethon.sessions import StringSession
 
 api_id = 17350549
 api_hash = "fa459305ef12234df0539b538fdea574"
-session = "1BVtsOHMBu2FhH46cicT6Ype1kzYj5nxE3CiQdj2X7Q6BS0GgwsVUSaCsTdaY18PMlDlP4-Nn481mcNlULYPe5HaC3eBFZ_W3S69KBbomQ-7_UZGUh8cmGs2L7zErfL5wesvM44N85yR3wo3exn79PHHyShaX0MQzjsojLhCe7o1r2W-NWzovAy3R6NPPzGZelTM-W7yEdM0z3Fmf8ZIrEZaMXcPGgFBSOOun8w9TzXE9PM2TbJqt-qYqVlsR9qdnFWitFjyEWJIzU_TzAoLoNj-sXP9ydlCUmiqWuxdz55GaU6ZAnDiTzBE-Yc7BwYA0AyJMYyyeHrxoo2PfwQVXuX7noegp2GQ="
+session = "1BVtsOHYBu6AVGNeG32J58rbqKFpAAY0hu4MqLaMUEngS-GEIlUN2JnRh-s8BKRUTmlSB3teIrfWDiLHQkxL8IZwzQtDnrIusQlXafLzNfhLxmVgfcZ-JlSehaZ1FKkA6bhU0tBBc3saG0L0inMx3y6euuKUYUCHV4ns0jAM4J8jfn_Q7GSmIYXep_7zGJgDBPrMCMGTik-Zgyr-dkJbfRIKwcQTZbTe3BDXwioiTYlvoP6CjyktdBFmBeWc6Aw9bgtb8WTmTnSBdC3snyyBBcgTpSt_hoRoDaBa8YpdNgQA27oP8HvH9Nj5dxOJZXQgEXFuZ8hIFupM2kRY4ZAFncfTXH-tjqCU="
 
 client = TelegramClient(StringSession(session) , api_id , api_hash)
 
-@client.on(events.NewMessage(chats=-1001653029817))
+@client.on(events.NewMessage(chats=-1001709343473))
 async def handler(event) : 
     chat  = await event.get_chat()
     chat_id = event.chat_id
     print("{}{}".format(chat_id,chat))
 
-    if chat_id == -1001653029817 :
+    if chat_id == -1001709343473 :
         await client.send_message(-1001683437077 , event.message)
         await client.send_message(-1001796193408 , event.message)
         await client.send_message(-1001762536924 , event.message)
